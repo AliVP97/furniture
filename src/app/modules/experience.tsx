@@ -18,7 +18,7 @@ export const Experience = () => {
             src="/experience-banner.jpg"
           />
           <Image
-            className="absolute rounded-[20px] object-cover md:end-[60px] md:top-[66px] md:h-[446px] md:w-[630px]"
+            className="absolute rounded-[20px] object-cover md:end-[60px] md:top-[66px] md:-ml-7 md:h-[446px] md:w-[630px]"
             height={446}
             width={630}
             alt="Rectangle"
