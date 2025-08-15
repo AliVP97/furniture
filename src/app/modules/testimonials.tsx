@@ -1,3 +1,6 @@
+import { ArrowLeftIcon, ArrowRightIcon, StarIcon } from "lucide-react";
+import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -5,165 +8,126 @@ const testimonials = [
   {
     name: "Bang Upin",
     role: "Pedagang Asongan",
-    image: "/ellipse-1131-2.png",
-    backgroundImage: "/unsplash--hqhx3lbn18-1.png",
-    blurImage: "/unsplash--hqhx3lbn18.png",
+    image: "/reviews/Bang Upin profile.jpg",
+    backgroundImage: "/reviews/Bang Upin.jpg",
     quote:
       "Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal",
-    rating: "/group-48095424-2.png",
-    union: "/union.svg",
+    rating: 4,
   },
   {
     name: "Ibuk Sukijan",
     role: "Ibu Rumah Tangga",
-    image: "/ellipse-1131.png",
-    backgroundImage: "/unsplash-jaxs8tk5iww-1.png",
-    blurImage: "/unsplash-jaxs8tk5iww.png",
+    image: "/reviews/Ibuk Sukijan profile.jpg",
+    backgroundImage: "/reviews/Ibuk Sukijan.jpg",
     quote:
       "Makasih Panto, aku sekarang berasa tinggal di apartment karena barang-barang yang terlihat mewah",
-    rating: "/group-48095424.png",
-    union: "/union-1.svg",
+    rating: 4,
   },
   {
     name: "Mpok Ina",
     role: "Karyawan Swasta",
-    image: "/ellipse-1131-1.png",
-    backgroundImage: "/unsplash-h2-3dl9ylpu-1.png",
-    blurImage: "/unsplash-h2-3dl9ylpu-1.png",
+    image: "/reviews/Mpok Ina profile.jpg",
+    backgroundImage: "/reviews/Mpok Ina.jpg",
     quote: "Sangat terjangkau untuk kantong saya yang tidak terlalu banyak",
-    rating: "/group-48095424-1.png",
-    union: "/union-2.svg",
+    rating: 4,
   },
 ];
 
 export const Testimonials = () => {
   return (
-    <>
-      <section className="relative w-full py-8 bg-[#f7f7f7]">
-        <h2 className="absolute w-[413px] top-[42px] left-0 [font-family:'Gilroy-Bold-Bold',Helvetica] font-bold text-[#1e1e1e] text-[42px] text-center tracking-[0] leading-[normal]">
-          Our Client Reviews
-        </h2>
-        <div className="absolute top-0 left-[129px] [font-family:'Gilroy-SemiBold-SemiBold',Helvetica] font-semibold text-[#e58411] text-lg text-center tracking-[3.15px] leading-[normal]">
-          TESTIMONIALS
-        </div>
-      </section>
-      {testimonials.map((testimonial, index) => (
-        <Card
-          key={testimonial.name}
-          className={`absolute w-[415px] h-[506px] top-[4439px] ${
-            index === 0
-              ? "left-[82px]"
-              : index === 1
-              ? "left-[536px]"
-              : "left-[944px]"
-          } bg-transparent border-none shadow-none`}
-        >
-          <CardContent className="p-0">
-            <div
-              className={`absolute w-[370px] h-[506px] top-0 ${
-                index === 0 ? "left-[45px]" : "left-0"
-              }`}
+    <section className="relative w-full pt-[240px]">
+      <h2 className="mb-5 text-center text-lg font-semibold text-[#e58411]">
+        TESTIMONIALS
+      </h2>
+      <div className="mb-[60px] text-center text-[42px] font-bold">
+        Our Client Reviews
+      </div>
+      <div className="relative mx-auto max-w-[1286px]">
+        <div className="relative mx-auto flex w-full snap-x snap-proximity items-center gap-10 overflow-x-auto px-12 pb-[240px] md:snap-none">
+          {testimonials.map((testimonial) => (
+            <Card
+              key={testimonial.name}
+              className={"snap-center border-none shadow-none"}
             >
-              <div
-                className={`relative w-[400px] h-[556px] ${
-                  index === 0 ? "left-[-13px]" : "left-[-15px]"
-                }`}
-              >
-                <img
-                  className="w-[400px] h-[480px] top-[76px] left-0 rounded-[44.39px] blur-[25px] absolute object-cover"
-                  alt="Unsplash"
-                  src={testimonial.blurImage}
-                />
-                <img
-                  className={`absolute rounded-[18.12px] object-cover ${
-                    index === 0
-                      ? "w-[370px] h-[476px] top-0 left-[13px]"
-                      : "w-[370px] h-[476px] top-0 left-4"
-                  }`}
-                  alt="Unsplash"
+              <CardContent className="relative h-[476px] w-[370px] p-0">
+                <Image
+                  className={
+                    "absolute inset-x-0 bottom-[-30px] mx-auto h-[380px] w-[300px] rounded-[44px] object-cover opacity-40 blur-[50px]"
+                  }
+                  width={300}
+                  height={380}
+                  alt="background blur"
                   src={testimonial.backgroundImage}
                 />
-                <div
-                  className={`absolute w-[336px] h-[239px] top-[219px] ${
-                    index === 0 ? "left-[18px]" : "left-[33px]"
-                  }`}
-                >
-                  <div
-                    className={`relative w-[334px] h-[239px] bg-[100%_100%]`}
-                    style={{ backgroundImage: `url(${testimonial.union})` }}
-                  >
-                    <div className="absolute w-[50px] h-[55px] top-2 left-[142px]">
-                      <div
-                        className={`relative w-[76px] h-[76px] -top-2 left-[-13px] bg-cover bg-[50%_50%]`}
-                        style={{
-                          backgroundImage: `url(/ellipse-1132${
-                            index === 1 ? "-1" : ".png"
-                          }`,
-                        }}
-                      >
-                        <img
-                          className="absolute w-[50px] h-[50px] top-2 left-[13px] object-cover"
-                          alt="Ellipse"
-                          src={testimonial.image}
+                <Image
+                  className={
+                    "absolute h-[476px] w-[370px] rounded-[18px] object-cover"
+                  }
+                  width={370}
+                  height={476}
+                  alt="background"
+                  src={testimonial.backgroundImage}
+                />
+                <div className="absolute bottom-0 m-[18px] flex flex-col items-center rounded-[18px] bg-white p-[18px] pt-[38px]">
+                  <div className="absolute top-[-32px] h-[66px] w-[66px] rounded-full bg-white object-cover" />
+                  <Image
+                    className="absolute top-[-20px] h-[50px] w-[50px] rounded-full object-cover opacity-50 blur-[14px]"
+                    width={50}
+                    height={50}
+                    alt="profile blur"
+                    src={testimonial.image}
+                  />
+                  <Image
+                    className="absolute top-[-24px] h-[50px] w-[50px] rounded-full object-cover"
+                    width={50}
+                    height={50}
+                    alt="profile"
+                    src={testimonial.image}
+                  />
+                  <h3 className={"mb-1.5 text-lg font-bold"}>
+                    {testimonial.name}
+                  </h3>
+                  <p className="mb-[22px] text-xs font-normal opacity-60">
+                    {testimonial.role}
+                  </p>
+                  <p className="mb-[22px] h-[52px] text-center text-sm font-normal opacity-80">
+                    &quot;{testimonial.quote}&quot;
+                  </p>
+                  <div className="flex gap-1.5">
+                    {Array(testimonial.rating)
+                      .fill(0)
+                      .map((_, index) => (
+                        <StarIcon
+                          key={index}
+                          fill="#F6B76F"
+                          stroke="#F6B76F"
+                          size={18}
                         />
-                      </div>
-                    </div>
-                    <div
-                      className={`absolute h-[42px] top-[71px] ${
-                        index === 0
-                          ? "w-[115px] left-[113px]"
-                          : index === 1
-                          ? "w-[109px] left-[116px]"
-                          : "w-[103px] left-[119px]"
-                      }`}
-                    >
-                      <h3
-                        className={`absolute top-0 [font-family:'Gilroy-Bold-Bold',Helvetica] font-bold text-[#1e1e1e] text-lg text-center tracking-[0] leading-[normal] ${
-                          index === 0
-                            ? "left-3"
-                            : index === 1
-                            ? "left-px"
-                            : "left-2.5"
-                        }`}
-                      >
-                        {testimonial.name}
-                      </h3>
-                      <p className="absolute top-7 left-0 opacity-60 [font-family:'Gilroy-Regular-Regular',Helvetica] font-normal text-[#1e1e1e] text-xs text-center tracking-[0] leading-[normal] whitespace-nowrap">
-                        {testimonial.role}
-                      </p>
-                    </div>
-                    <p className="absolute w-[252px] top-[135px] left-[42px] opacity-80 [font-family:'Gilroy-Regular-Regular',Helvetica] font-normal text-[#1e1e1e] text-sm text-center tracking-[0] leading-[normal]">
-                      &quot;{testimonial.quote}&quot;
-                    </p>
-                    <img
-                      className="absolute w-[90px] h-3.5 top-52 left-[122px]"
-                      alt="Group"
-                      src={testimonial.rating}
-                    />
+                      ))}
+                    {Array(5 - testimonial.rating)
+                      .fill(0)
+                      .map((_, index) => (
+                        <StarIcon
+                          key={index}
+                          fill="#F6973F"
+                          stroke="#F6973F"
+                          size={18}
+                          opacity={0.3}
+                        />
+                      ))}
                   </div>
                 </div>
-              </div>
-            </div>
-            {index !== 1 && (
-              <Button
-                className={`absolute w-[89px] h-[89px] top-[131px] p-0 bg-transparent border-none shadow-none hover:bg-transparent ${
-                  index === 0 ? "left-0" : "left-[325px]"
-                }`}
-              >
-                <img
-                  className="w-[89px] h-[89px]"
-                  alt="Frame"
-                  src={
-                    index === 0
-                      ? "/frame-48095401-1.svg"
-                      : "/frame-48095395-2.svg"
-                  }
-                />
-              </Button>
-            )}
-          </CardContent>
-        </Card>
-      ))}
-    </>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        <Button className="absolute start-[24px] top-[144px] h-[50px] w-[50px] rounded-full bg-white p-0">
+          <ArrowLeftIcon />
+        </Button>
+        <Button className="absolute end-[24px] top-[144px] h-[50px] w-[50px] rounded-full bg-white p-0">
+          <ArrowRightIcon />
+        </Button>
+      </div>
+    </section>
   );
 };
