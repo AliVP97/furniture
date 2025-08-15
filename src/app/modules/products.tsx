@@ -109,7 +109,7 @@ export const Products = () => {
           <TabsContent
             key={categoryValue}
             value={categoryValue}
-            className="relative flex w-full items-center"
+            className="relative flex w-full max-w-[1200px] items-center"
           >
             {/* <div className="w-full"> */}
             <div className="flex w-full snap-x snap-proximity gap-[42px] overflow-x-auto md:snap-none">
