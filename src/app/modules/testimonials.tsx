@@ -35,15 +35,15 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section className="relative w-full pt-[240px]">
+    <section className="relative w-full pt-12 md:pt-[240px]">
       <h2 className="mb-5 text-center text-lg font-semibold text-[#e58411]">
         TESTIMONIALS
       </h2>
-      <div className="mb-[60px] text-center text-[42px] font-bold">
+      <div className="mb-8 text-center text-[42px] font-bold md:mb-[60px]">
         Our Client Reviews
       </div>
       <div className="relative mx-auto max-w-[1286px]">
-        <div className="relative mx-auto flex w-full snap-x snap-proximity items-center gap-10 overflow-x-auto px-12 pb-[240px] md:snap-none">
+        <div className="relative mx-auto flex w-full snap-x snap-proximity items-center gap-10 overflow-x-auto px-12 pb-12 md:snap-none md:pb-[240px]">
           {testimonials.map((testimonial) => (
             <Card
               key={testimonial.name}
