@@ -118,7 +118,9 @@ export const Products = () => {
                 .map((product) => (
                   <Card
                     key={product.name}
-                    className={"mt-12 snap-start border-none bg-[#FAFAFA]"}
+                    className={
+                      "mt-12 snap-start border-none bg-[#FAFAFA] shadow-none"
+                    }
                   >
                     <CardContent className="relative flex h-[442px] flex-col rounded-[20px] p-0">
                       <div className="mx-5 -mt-12 h-[288px] w-[218px]">
