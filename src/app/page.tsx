@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <WhyChoosingUs />
       <Products />
-      {/* <Experience /> */}
+      <Experience />
       {/* <Materials /> */}
       {/* <Testimonials /> */}
       {/* <Footer /> */}
