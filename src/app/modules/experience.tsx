@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export const Experience = () => {
   return (
     <section className="flex w-full flex-col gap-12 p-12 md:flex-row md:gap-20 md:px-0 md:py-60">
-      <div className="relative md:h-[542px] md:w-1/3 md:max-w-[690px]">
+      <div className="relative h-[250px] md:h-[542px] md:w-1/3 md:max-w-[690px]">
         <div className="absolute end-56 top-0 hidden h-[422px] w-[495px] rounded-[20px] bg-[#f7f7f7]" />
         <div className="absolute end-0 top-[138px] hidden h-[300px] w-[494px] rounded-[20px] bg-[#f7f7f7]" />
         <Image
